@@ -4,10 +4,7 @@ host = 'localhost'
 port = 27017
 dbname = 'car'
 
-try:
-  mongo_conn = pymongo.MongoClient(host)
-except pymongo.errors.ConnectionFailure, e:
-  raise MongoException(e)
+mongo_conn = pymongo.MongoClient(host)
 
 table = mongo_conn[dbname].car
 
