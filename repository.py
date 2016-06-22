@@ -2,7 +2,7 @@ import pymongo
 
 host = 'localhost'
 port = 27017
-dbname = 'car'
+dbname = 'vehicles'
 
 mongo_conn = pymongo.MongoClient(host)
 
