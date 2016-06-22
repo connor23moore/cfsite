@@ -10,7 +10,6 @@ table = mongo_conn[dbname].car
 
 class CarRepository:
   def create_car(self, name, color):
-    table = mongo_conn[dbname].car
 
     table.insert_one({
       name: name,
@@ -18,6 +17,4 @@ class CarRepository:
     })
 
   def get_all_cars(self):
-    table = mongo_conn[dbname].car
-
     return list(table.find())
